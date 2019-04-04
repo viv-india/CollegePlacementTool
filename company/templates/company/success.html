@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% csrf_token %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Success</title>
+</head>
+<body>
+{% if names %}
+
+{% for name in names %}
+<li> {{name}} </li>
+{% endfor %}
+{%else%}
+<strong> NOT FOUND </strong>
+{%endif%}
+</body>
+</html>
