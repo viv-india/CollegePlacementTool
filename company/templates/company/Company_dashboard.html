@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+</head>
+<body>
+<p> Welcome {{name}}</p>
+{%if jobs%}
+Jobs Posted
+<br/>
+{%for job in jobs%}
+   *****************************************************
+    <br/>
+  CTC Offered: {{job.ctc}}
+ <br />
+  Skills Required: {{job.skills_required}}
+ <br />
+  Date of Visit: {{job.date_of_visit}}
+ <br />
+  Number of Openings: {{job.openings}}
+ <br />
+  Interview Round(s) Description: {{job.rounds}}
+ <br />
+    <br/>
+<br/>
+{%endfor%}
+{%else%}
+<strong>No Jobs Submitted</strong>
+{%endif%}
+<br/>
+<br/>
+<br/>
+<br/>
+
+"New Job Submission": <a href="{% url 'register_for_job' c_id %}">Click here</a>
+</body>
+</html>

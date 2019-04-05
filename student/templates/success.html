@@ -6,11 +6,10 @@
     <title>Success</title>
 </head>
 <body>
-{% if company_id %}
-<strong> Registration Successfull with it {{company_id}}, Kindly note this id as it will be used during login </strong>
+{% if student_id %}
+<strong> Registration Successfull with it {{student_id}}, Kindly note this id as it will be used during login </strong>
 {%else%}
 <strong> Unable to register kindly register again </strong>
-<a href="login"><button>Go Back</button></a>
 {%endif%}
 </body>
 </html>

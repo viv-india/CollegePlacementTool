@@ -31,7 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'home',
     'company',
+    'student',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -55,7 +57,7 @@ ROOT_URLCONF = 'major.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r"C:\Users\This PC\major\company\templates"],
+        'DIRS': [r"C:\Users\This PC\major\company\templates", r"C:\Users\This PC\major\home\templates", r"C:\Users\This PC\major\student\templates" ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

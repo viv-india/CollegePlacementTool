@@ -3,7 +3,8 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('submit', views.submit, name='submit'),
-    path('thanks', views.thanks, name='thanks')
+    path('', views.login, name='login'),
+    #path('dashboard', views.dashboard, name='dashboard'),
+    path('register_company', views.register_company, name='register_company'),
+    path(r'^register_for_job/(?P<c_id>\d+)/$', views.register_for_job, name='register_for_job')
 ]
