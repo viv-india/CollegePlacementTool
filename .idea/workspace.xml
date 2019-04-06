@@ -41,6 +41,14 @@
       <change beforePath="$PROJECT_DIR$/major/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/major/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/major/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/major/wsgi.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/img.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/student/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/student/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/student/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/student/apps.py" afterDir="false" />
@@ -97,11 +105,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/home/templates/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="2" column="53" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
+            <state relative-caret-position="617">
+              <caret line="171" column="28" lean-forward="true" selection-start-line="171" selection-start-column="28" selection-end-line="171" selection-end-column="28" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#p#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#0;n#head#0;n#html#0;n#!!top" expanded="true" />
@@ -114,10 +122,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/major/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="708">
+            <state relative-caret-position="-699">
               <caret line="67" column="14" lean-forward="true" selection-start-line="67" selection-start-column="14" selection-end-line="67" selection-end-column="14" />
             </state>
           </provider>
@@ -690,10 +698,17 @@
     <entry file="file://$PROJECT_DIR$/static/images/3.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/major/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-699">
+          <caret line="67" column="14" lean-forward="true" selection-start-line="67" selection-start-column="14" selection-end-line="67" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/home/templates/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="2" column="53" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
+        <state relative-caret-position="617">
+          <caret line="171" column="28" lean-forward="true" selection-start-line="171" selection-start-column="28" selection-end-line="171" selection-end-column="28" />
           <folding>
             <element signature="n#style#0;n#img#0;n#p#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#head#0;n#html#0;n#!!top" expanded="true" />
@@ -702,13 +717,6 @@
             <element signature="n#style#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#1;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/major/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="708">
-          <caret line="67" column="14" lean-forward="true" selection-start-line="67" selection-start-column="14" selection-end-line="67" selection-end-column="14" />
         </state>
       </provider>
     </entry>
