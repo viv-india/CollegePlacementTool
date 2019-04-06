@@ -2,6 +2,18 @@ from django import forms
 from django.utils.safestring import mark_safe
 
 
+class CseSkillForm(forms.Form):
+    oops = forms.CharField(label=mark_safe('<br />Object Oriented Programming:'), max_length=1000)
+    dbms = forms.CharField(label=mark_safe('<br />Database and Management Systems:'), max_length=1000)
+    network = forms.CharField(label=mark_safe('<br />Computer Networks:'), max_length=1000)
+    dsa = forms.CharField(label=mark_safe('<br />Data Structures and Algorithm:'), max_length=1000)
+    os = forms.CharField(label=mark_safe('<br />Operating Systems:'), max_length=1000)
+    compiler = forms.CharField(label=mark_safe('<br />Compiler:'), max_length=1000)
+    cp = forms.CharField(label=mark_safe('<br />Competitive Programming:'), max_length=1000)
+    communication = forms.CharField(label=mark_safe('<br />Communication Skills:'), max_length=1000)
+    jee_mains = forms.CharField(label=mark_safe('<br />Jee Mains Score:'), max_length=1000)
+
+
 class StudentForm(forms.Form):
     student_name = forms.CharField(label=mark_safe('<br />Student Name:'), max_length=1000)
     student_id = forms.CharField(label=mark_safe('<br />Email id:'), max_length=1000)
@@ -12,6 +24,7 @@ class StudentForm(forms.Form):
 class LoginForm(forms.Form):
     student_roll = forms.CharField(label=mark_safe('<br />Login id'), max_length=1000)
     password = forms.CharField(label=mark_safe('<br />Password'), max_length=1000)
+
 
 class GenForm(forms.Form):
     percentage_in_10th = forms.FloatField()

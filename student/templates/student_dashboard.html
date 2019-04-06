@@ -2,9 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Dashboard</title>
 </head>
 <body>
+{%if pred %}
+<p>According to previously analyzed data there is {{pred}} % chance of your placement</p>
+<a href="{% url 'edit_student_detail' %}">Edit Personal Details</a>
 
+{%else%}
+"Update your information to know prediction about your placement": <a href="{% url 'edit_student_detail' %}">Click here</a>
+{%endif%}
+
+{%if suggestions %}
+<p>Course Sugesstions</p>
+{%for suggestion in suggestions %}
+<p> {{suggestion}}</p>
+{%endfor%}
+<a href="{% url 'student_skill_edit' %}">Edit Skill Details</a>
+{%else%}
+"Update your information to know suggested courses to improve placement chance": <a href="{% url 'student_skill_edit' %}">Click here</a>
+{%endif%}
+
+<br/>
+<br/>
+Upcoming Jobs
+<br/>
+{% if jobs %}
+{%for job in jobs%}
+   *****************************************************
+    <br/>
+  CTC Offered: {{job.ctc}}
+ <br />
+  Skills Required: {{job.skills_required}}
+ <br />
+  Date of Visit: {{job.date_of_visit}}
+ <br />
+  Number of Openings: {{job.openings}}
+ <br />
+  Interview Round(s) Description: {{job.rounds}}
+ <br />
+    <br/>
+<br/>
+{% endfor%}
+{% else %}
+<strong>No Jobs Submitted</strong>
+{%endif%}
 </body>
 </html>

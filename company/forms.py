@@ -17,5 +17,5 @@ class JobForm(forms.Form):
 
 
 class LoginForm(forms.Form):
-    company_id = forms.CharField(label=mark_safe('<br />Login id'), max_length=1000)
+    company_id = forms.CharField(label=mark_safe('<br />Email id'), max_length=1000)
     password = forms.CharField(label=mark_safe('<br />Password'), max_length=1000)

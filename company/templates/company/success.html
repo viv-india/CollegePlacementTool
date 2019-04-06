@@ -10,7 +10,10 @@
 <strong> Registration Successfull with it {{company_id}}, Kindly note this id as it will be used during login </strong>
 {%else%}
 <strong> Unable to register kindly register again </strong>
-<a href="login"><button>Go Back</button></a>
+
 {%endif%}
+
+<br/>
+To go to login page <a href="{% url 'Login' %}">Click Here </a>
 </body>
 </html>
