@@ -73,29 +73,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/company/templates/company/Company_dashboard.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="47" column="53" selection-start-line="47" selection-start-column="53" selection-end-line="47" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/company/templates/company/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-              <folding>
-                <element signature="n#style#0;n#h#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#form#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#form#0;n#body#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/company/templates/company/register_company.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
@@ -108,23 +85,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/company/templates/company/success.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="16" column="47" lean-forward="true" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/student/templates/edit_student_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="693">
+            <state relative-caret-position="265">
               <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
               <folding>
                 <element signature="n#style#0;n#form#0;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#form#0;n#body#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/home/templates/main.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="21">
+              <caret line="2" column="53" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#p#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#head#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/major/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="708">
+              <caret line="67" column="14" lean-forward="true" selection-start-line="67" selection-start-column="14" selection-end-line="67" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -165,7 +159,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/student/templates/student_skill_edit.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="461">
@@ -217,7 +211,6 @@
         <option value="$PROJECT_DIR$/company/templates/company/stylesheet.css" />
         <option value="$PROJECT_DIR$/company/templates/company/login.html" />
         <option value="$PROJECT_DIR$/major/urls.py" />
-        <option value="$PROJECT_DIR$/major/settings.py" />
         <option value="$PROJECT_DIR$/student/templates/login.html" />
         <option value="$PROJECT_DIR$/student/dataSetToNumeric.py" />
         <option value="$PROJECT_DIR$/student/classifierV2.py" />
@@ -227,7 +220,6 @@
         <option value="$PROJECT_DIR$/student/urls.py" />
         <option value="$PROJECT_DIR$/company/urls.py" />
         <option value="$PROJECT_DIR$/company/views.py" />
-        <option value="$PROJECT_DIR$/home/templates/main.html" />
         <option value="$PROJECT_DIR$/student/views.py" />
         <option value="$PROJECT_DIR$/company/templates/company/Company_dashboard.html" />
         <option value="$PROJECT_DIR$/company/templates/company/Job_register.html" />
@@ -238,10 +230,12 @@
         <option value="$PROJECT_DIR$/student/templates/student_dashboard.html" />
         <option value="$PROJECT_DIR$/student/templates/success.html" />
         <option value="$PROJECT_DIR$/student/templates/student_skill_edit.html" />
+        <option value="$PROJECT_DIR$/major/settings.py" />
+        <option value="$PROJECT_DIR$/home/templates/main.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="85" />
     <option name="y" value="25" />
     <option name="width" value="1750" />
@@ -325,54 +319,29 @@
             <path>
               <item name="major" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="C:\Users\This PC\major" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="company" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="major" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\This PC\major" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="company" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="templates" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="major" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\This PC\major" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="company" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="templates" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="company" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="major" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\This PC\major" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="home" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="major" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="C:\Users\This PC\major" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="home" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="migrations" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="major" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\This PC\major" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="home" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="templates" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="major" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="C:\Users\This PC\major" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="student" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="major" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="major" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="C:\Users\This PC\major" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="student" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="migrations" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="static" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="major" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="C:\Users\This PC\major" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="student" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="templates" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="static" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="images" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -383,15 +352,23 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Desktop/CollegePlacementTool-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/images" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\This PC\major\student" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\This PC\major\company\templates\company" />
+      <recent name="C:\Users\This PC\major" />
+      <recent name="C:\Users\This PC\major\home\static\images" />
+      <recent name="C:\Users\This PC\major\major\static\images" />
+      <recent name="C:\Users\This PC\major\home\templates" />
+      <recent name="C:\Users\This PC\major\major\static" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\This PC\major\static\images" />
+      <recent name="C:\Users\This PC\major\home\static\images" />
+      <recent name="C:\Users\This PC\major\home" />
+      <recent name="C:\Users\This PC\major" />
+      <recent name="C:\Users\This PC\major\student" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -434,7 +411,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.042432815" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.2545969" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -444,7 +421,7 @@
     <layout-to-restore>
       <window_info id="Favorites" order="0" sideWeight="0.5022523" side_tool="true" weight="0.22787318" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49774775" visible="true" weight="0.22787318" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49774775" visible="true" weight="0.18229854" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32956153" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -453,7 +430,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.07496464" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.2545969" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -475,13 +452,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/home/models.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/major/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="59" column="150" selection-start-line="59" selection-start-column="150" selection-end-line="59" selection-end-column="150" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/student/dataSetToNumeric.py" />
     <entry file="file://$PROJECT_DIR$/student/classifierV2.py">
@@ -613,20 +583,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/home/templates/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="29" column="77" selection-start-line="29" selection-start-column="77" selection-end-line="29" selection-end-column="77" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#head#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#a#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/company/templates/company/Job_register.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -660,17 +616,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="16" column="47" lean-forward="true" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student/templates/edit_student_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
-          <folding>
-            <element signature="n#style#0;n#form#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#form#0;n#body#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -728,6 +673,42 @@
           <folding>
             <element signature="n#style#0;n#form#0;n#body#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student/templates/edit_student_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#form#0;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/3.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/templates/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="2" column="53" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#p#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#head#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/major/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
+          <caret line="67" column="14" lean-forward="true" selection-start-line="67" selection-start-column="14" selection-end-line="67" selection-end-column="14" />
         </state>
       </provider>
     </entry>
