@@ -5,31 +5,55 @@
     <title>Dashboard</title>
 </head>
 <body>
+<style>
+a.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
 {%if pred %}
+
 <p>According to previously analyzed data there is {{pred}} % chance of your placement</p>
-<a href="{% url 'edit_student_detail' %}">Edit Personal Details</a>
+
+
+<a href="{% url 'edit_student_detail' %}" class="button">Edit Personal Details</a>
+<br />
+<br />
+<br />
+<br />
+<br />
 
 {%else%}
-"Update your information to know prediction about your placement": <a href="{% url 'edit_student_detail' %}">Click here</a>
+"Update your information to know prediction about your placement": <a href="{% url 'edit_student_detail' %}" class="button">Click here</a>
 {%endif%}
-
+<br/>
+<br/>
 {%if suggestions %}
-<p>Course Sugesstions</p>
+<strong>Course Sugesstions</strong>
+<br/>
+*************************************************
 {%for suggestion in suggestions %}
 <p> {{suggestion}}</p>
 {%endfor%}
-<a href="{% url 'student_skill_edit' %}">Edit Skill Details</a>
+***************************************************
+<br/>
+<br/>
+<a href="{% url 'student_skill_edit' %}" class="button">Edit Skill Details</a>
 {%else%}
-"Update your information to know suggested courses to improve placement chance": <a href="{% url 'student_skill_edit' %}">Click here</a>
+"Update your information to know suggested courses to improve placement chance": <a href="{% url 'student_skill_edit' %}" class="button">Click here</a>
 {%endif%}
-
 <br/>
-<br/>
+<br/><br/><br/><br/>
 Upcoming Jobs
 <br/>
 {% if jobs %}
 {%for job in jobs%}
-   *****************************************************
+*****************************************************
     <br/>
   CTC Offered: {{job.ctc}}
  <br />

@@ -5,6 +5,18 @@
     <title>Dashboard</title>
 </head>
 <body>
+<style>
+a.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+</style>
 <p> Welcome {{name}}</p>
 {%if jobs%}
 Jobs Posted
@@ -33,6 +45,6 @@ Jobs Posted
 <br/>
 <br/>
 
-"New Job Submission": <a href="{% url 'register_for_job' %}">Click here</a>
+<a href="{% url 'register_for_job' %}"class="button" >New Job Submission</a>
 </body>
 </html>
