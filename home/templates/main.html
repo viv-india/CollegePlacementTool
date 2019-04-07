@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<p>{% load static %}<img src="{% static 'images/img  .png' %}"   alt="logo face" width="1730" height="100" style="vertical-align:top"/></p>
+<p>
+  {% load static %}<img src="{% static 'images/8.png' %}"   alt="logo face"  style="vertical-align:top;width:100%"/></p>
 <style>
-  body  
-  {  
-      background-color:black;  
-  }    
+  body
+  {
+      background-color:white;
+  }
 </style>
 <style>
 button {
@@ -20,8 +21,8 @@ button {
 </style>
 
 <head>
-  
-    <p style="color:white;font-family:verdana;font-size:30px;text-align:center"><b>Welcome to the Placement Portal of NIT Patna</b></p>size:30px"><b>Welcome to the Placement Portal of NIT Patna</b></p>
+
+    <p style="color:black;font-family:verdana;font-size:30px;text-align:center"><b>Welcome to the Placement Portal of NIT Patna</b>
     <meta charset="UTF-8">
     <title>Home Page</title>
 </head>
@@ -33,18 +34,18 @@ button {
 * {box-sizing: border-box;}
 body {font-family: Verdana, sans-serif;}
 .mySlides {display: none;}
-img {vertical-align: middle;}
+img {vertical-align: lefthbnjgbvhnmnhbnhjbg nnjhnnb  hhx;}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 100px;
   position: relative;
   margin: auto;
   text-align: center;
 }
 .slideshow-container img {
   height: 100%;
-  width: 100%;
+  width: 20%;
 }
 
 
@@ -89,20 +90,20 @@ img {vertical-align: middle;}
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
- 
-    
-    width:  1000px;
-    height: 300px;
-    
+
+
+    width:  900px;
+    height: 50px;
+
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .4}
   to {opacity: 1}
 }
 
 @keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .4}
   to {opacity: 1}
 }
 
@@ -112,66 +113,71 @@ img {vertical-align: middle;}
 }
 </style>
 </head>
-<body>
+<body >
 
-<h2>Automatic Slideshow</h2>
-<p>Change image every 2 seconds:</p>
+<p style="color:black;font-family:verdana;font-size:30px;margin-top:0px;margin-left:200px;">Student </p>
+<a href="student/login"><button style="margin-top: 100px;margin-left: 150px;">Login</button> </a>
+<a href="student/register_student"><button style="margin-top: 0px;margin-left: 0px;"> Signup </button> </a>
 
-<div class="slideshow-container">
+
+<p style="color:black;font-family:verdana;font-size:30px;margin-top:-220px;margin-left:1150px">Employer<br/>
+  <a href="company/Login"><button style="margin-top:140px;margin-left:-30px">Login</button> </a>
+  <a href="{% url 'register_company' %}"><button style="margin-top:-300px;margin-left:0px"> Signup </button></a>
+</p>
+
+<div  style="margin-top: -150px;margin-left: 700px;" class="slideshow-container">
 
 <div class="mySlides fade">
-  <div class="numbertext">1 / 7</div>
-  {% load static %}<img src="{% static 'images/1.jpg' %}" style="width:50%">
- 
+  {% load static %}<img src="{% static 'images/1.jpg' %}" style="width:50%;height:600%;margin-top: -100px;
+  margin-left: -800px;">
+
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">2 / 7</div>
-  {% load static %}<img src="{% static 'images/2.jpg' %}" style="width:50%">
+  {% load static %}<img src="{% static 'images/2.jpg' %}" style="width:50%;height:600%;margin-top: -100px;
+  margin-left: -800px;">
 
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">3 / 7</div>
-  {% load static %}<img src="{% static 'images/3.jpg' %}"  style="width:50%">
+  {% load static %}<img src="{% static 'images/3.jpg' %}"  style="width:50%;height:600%;margin-top: -100px;
+  margin-left: -800px;">
 
 </div>
 
 
 <div class="mySlides fade">
-  <div class="numbertext">4 / 7</div>
-  {% load static %}<img src="{% static 'images/4.jpg' %}"  style="width:50%">
+  {% load static %}<img src="{% static 'images/4.jpg' %}"  style="width:50%;height:600%;margin-top: -100px;
+  margin-left: -800px;">
   </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">5 / 7</div>
-  {% load static %}<img src="{% static 'images/5.png' %}"  style="width:50%">
-  
+  {% load static %}<img src="{% static 'images/5.png' %}"  style="width:50%;height:600%;margin-top: -100px;
+  margin-left: -800px;">
+
 </div>
 
 
 <div class="mySlides fade">
-  <div class="numbertext">6 / 7</div>
-  {% load static %}<img src="{% static 'images/6.jpg' %}"  style="width:50%">
-  
+  {% load static %}<img src="{% static 'images/6.jpg' %}"  style="width:50%;height:600%;margin-top: -100px;
+  margin-left: -800px;">
+
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">7 / 7</div>
 
-  {% load static %}<img src="{% static 'images/7.jpg' %}"  style="width:50%">
+  {% load static %}<img src="{% static 'images/7.jpg' %}"  style="width:50%;height:600%;margin-top: -100px;
+  margin-left: -800px;">
 </div>
-<br>
-
 <div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+
 </div>
 
 <script>
@@ -183,32 +189,30 @@ function showSlides() {
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+    slides[i].style.display = "none";
   }
   slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
+  if (slideIndex > slides.length) {slideIndex = 1}
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";  
+  slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 </script>
-</body>
-
-
-<p style="color:white;font-family:verdana;font-size:30px;margin-top:400px;margin-left:0px">Student Login</p>
-<p style="color:white;font-family:verdana;font-size:30px;margin-top:-65px;margin-left:850px">Company Login</p>
-
-<body>
-
-
-<a href="student"><button style="margin-top:200px;margin-left:160px">Login</button> </a>
-<a href="student/register_student"><button style="margin-left:25px"> Signup </button> </a>
-
-<a href="company"><button style="margin-top:200px;margin-left:860px">Login</button> </a>
-<a href="company/register_company"><button style="margin-left:25px"> Signup </button> </a>
+</div>
 
 </body>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+{% load static %}<img src="{% static 'images/oyo.png' %}"  style="margin-left:50px;width:5%;height:5%;background:transparent;">
+{% load static %}<img src="{% static 'images/amazon.png' %}"  style="margin-left:100px;width:5%;height:5%;background:transparent;">
+{% load static %}<img src="{% static 'images/optum.png' %}"  style="margin-left:100px;width:5%;height:5%;background:transparent;">
+{% load static %}<img src="{% static 'images/oracle.png' %}"  style="margin-left:100px;width:5%;height:5%;background:transparent;">
+{% load static %}<img src="{% static 'images/sap.png' %}"  style="margin-left:100px;width:5%;height:5%;background:transparent;">
+{% load static %}<img src="{% static 'images/lnt.png' %}"  style="margin-left:100px;width:5%;height:5%;background:transparent;">
+{% load static %}<img src="{% static 'images/factset.png' %}"  style="margin-left:100px;width:5%;height:5%;background:transparent;">
+{% load static %}<img src="{% static 'images/samsung.png' %}"  style="margin-left:100px;width:10%;height:10%;background:transparent;">
+
+
 </html>
