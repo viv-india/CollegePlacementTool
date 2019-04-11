@@ -4,13 +4,26 @@ from django.views.decorators.csrf import  csrf_exempt
 from django.shortcuts import render
 
 from company.models import Job
-from .forms import LoginForm, StudentForm, GenForm, CseSkillForm
-from student.models import Student, Cse, StudentGen
+from .forms import LoginForm, StudentForm, GenForm, CseSkillForm, CseSkillRatingForm
+from student.models import Student, Cse, StudentGen, CseRating
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
-import os
-
+import pandas as pd
+from sklearn.metrics import accuracy_score
+from sklearn.metrics import classification_report
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import confusion_matrix
+from keras.models import Sequential
+from keras.layers import Dense
+import keras
+import numpy as np
+from keras.models import Sequential
+from keras.layers import Dense, Dropout
+from keras.layers import Embedding
+from keras.layers import LSTM
+from keras.optimizers import SGD
+from keras.utils import to_categorical
 
 class StudentId:
     s_id = "NULL"
@@ -65,27 +78,7 @@ def edit_student_detail(request):
                  prev_student.delete()
             except StudentGen.DoesNotExist:
                 prev_student = None
-            new_student_detail = StudentGen.objects.create(percentage_in_10th=form.data['percentage_in_10th'],
-                                                           percentage_in_12th=form.data['percentage_in_12th'],
-                                                           current_CGPA=form.data['current_CGPA'],
-                                                           year_of_birth=form.data['year_of_birth'],
-                                                           expected_year_of_placement=form.data[
-                                                               'expected_year_of_placement'],
-                                                           passing_year_of_10th=form.data['passing_year_of_10th'],
-                                                           passing_year_of_12th=form.data['passing_year_of_12th'],
-                                                           Board_10th=form.data['Board_10th'],
-                                                           Board_12th=form.data['Board_12th'],
-                                                           BTech_Branch=form.data['BTech_Branch'],
-                                                           Category=form.data['Category'],
-                                                           Fathers_Occupation=form.data['Fathers_Occupation'],
-                                                           Gender=form.data['Gender'],
-                                                           Mothers_Occupation=form.data['Mothers_Occupation'],
-                                                           Permanent_address=form.data['Permanent_address'],
-                                                           type_of_disability=form.data['type_of_disability'],
-                                                           student_roll=StudentId.s_id
-                                                           )
-            new_student_detail.save()
-            print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@##############")
+
 
             train = pd.read_excel('ModifiedNumericDataSetV2.xlsx', index=False)
             X = train
@@ -144,6 +137,27 @@ def edit_student_detail(request):
             print(curr_student.columns)
             x = clf.predict_proba(curr_student)
             print(x[0][1])
+            new_student_detail = StudentGen.objects.create(percentage_in_10th=form.data['percentage_in_10th'],
+                                                           percentage_in_12th=form.data['percentage_in_12th'],
+                                                           current_CGPA=form.data['current_CGPA'],
+                                                           year_of_birth=form.data['year_of_birth'],
+                                                           expected_year_of_placement=form.data[
+                                                               'expected_year_of_placement'],
+                                                           passing_year_of_10th=form.data['passing_year_of_10th'],
+                                                           passing_year_of_12th=form.data['passing_year_of_12th'],
+                                                           Board_10th=form.data['Board_10th'],
+                                                           Board_12th=form.data['Board_12th'],
+                                                           BTech_Branch=form.data['BTech_Branch'],
+                                                           Category=form.data['Category'],
+                                                           Fathers_Occupation=form.data['Fathers_Occupation'],
+                                                           Gender=form.data['Gender'],
+                                                           Mothers_Occupation=form.data['Mothers_Occupation'],
+                                                           Permanent_address=form.data['Permanent_address'],
+                                                           type_of_disability=form.data['type_of_disability'],
+                                                           student_roll=StudentId.s_id,
+                                                           placement_chance=x[0][1],
+                                                           )
+            new_student_detail.save()
             return redirect(student_dashboard)
     else:
         form = GenForm()
@@ -180,6 +194,132 @@ def student_skill_edit(request):
     else:
         form = CseSkillForm()
     return render(request, 'student_skill_edit.html', {'form': form})
+
+
+@csrf_exempt
+def placed_skill_rating(request):
+
+    if request.method == 'POST':
+        if StudentGen.objects.filter(student_roll=StudentId.s_id).first()==None:
+            return HttpResponse("Kindly update your Personal Details form First")
+
+        if Cse.objects.filter(student_roll=StudentId.s_id).first()==None:
+            return HttpResponse("Kindly update your fill Skill Details form First")
+        form = CseSkillRatingForm(request.POST)
+        if form.is_valid() and StudentId.s_id!="NULL":
+
+            try:
+                prev_student = CseRating.objects.get(student_roll=StudentId.s_id)
+                if prev_student:
+                    prev_student.delete()
+            except:
+                prev_student = None
+            new_skill_data= CseRating.objects.create(    dsa = form.data['dsa'],
+                                                oops = form.data['oops'],
+                                                dbms = form.data['dbms'],
+                                                Computer_Networks = form.data['network'],
+                                                os = form.data['os'],
+                                                compiler = form.data['compiler'],
+                                                communication = form.data['communication'],
+                                                jee_mains = form.data['jee_mains'],
+                                                cp = form.data['cp'],
+                                                student_roll = StudentId.s_id,
+                                                student_background =form.data['student_background'],
+                                                placement_status =  form.data['student_background']
+                                                 )
+
+
+            new_skill_data.save()
+            all_student_skills = CseRating.objects.all()
+            temp_map = {}
+            temp_map['dsa'] = 0
+            temp_map['oops'] = 0
+            temp_map['dbms'] = 0
+            temp_map['Computer_Networks'] = 0
+            temp_map['os'] = 0
+            temp_map['compiler'] = 0
+            temp_map['communication'] = 0
+            temp_map['jee_mains'] = 0
+            temp_map['cp'] = 0
+            temp_map['student_background'] = 0
+            n = 0
+            student_list=[]
+            for stuskill in all_student_skills:
+                temp_map['dsa'] += stuskill.dsa
+                temp_map['oops'] += stuskill.oops
+                temp_map['dbms'] += stuskill.dbms
+                temp_map['Computer_Networks'] += stuskill.Computer_Networks
+                temp_map['os'] += stuskill.os
+                temp_map['compiler'] += stuskill.compiler
+                temp_map['communication'] += stuskill.communication
+                temp_map['jee_mains'] += stuskill.jee_mains
+                temp_map['cp'] += stuskill.cp
+                temp_map['student_background'] +=stuskill.student_background
+                student_list.append(stuskill.student_roll)
+                n += 1
+            temp_map['dsa'] /= n
+            temp_map['oops'] /= n
+            temp_map['dbms'] /= n
+            temp_map['Computer_Networks'] /= n
+            temp_map['os'] /= n
+            temp_map['compiler'] /= n
+            temp_map['communication'] /= n
+            temp_map['jee_mains'] /= n
+            temp_map['cp'] /= n
+            temp_map['student_background'] /= n
+            #####Deep#######
+            model = Sequential()
+            model.add(Dense(1, activation='relu', input_dim=16))
+            sgd = SGD(lr=0.01)
+
+            model.compile(loss='mean_squared_error',
+                          optimizer=sgd,
+                          metrics=['accuracy'])
+            for roll in student_list:
+                student1= StudentGen.objects.filter(student_roll=roll).first()
+                student = Cse.objects.filter(student_roll=roll).first()
+                list1 = [
+                     student1.placement_chance,
+                     student.dsa,
+                     student.oops,
+                    student.dbms,
+                    student.Computer_Networks,
+                    student.os,
+                    student.compiler,
+                    student.communication,
+                    student.jee_mains,
+                    student.cp,
+                ]
+                list2 = [
+                    'placement_chance',
+                    'dsa',
+                    'oops',
+                    'dbms',
+                    'cn',
+                    'os',
+                    'compiler',
+                    'communication',
+                    'jee_mains',
+                    'cp'
+                ]
+
+                X = pd.DataFrame(list1, columns=list2)
+                Y= pd.DataFrame(['placement_status'], columns=temp_map['placement_status'])
+                model = Sequential()
+                model.add(Dense(1, activation='relu', input_dim=22))
+                sgd = SGD(lr=0.01)
+
+                model.compile(loss='mean_squared_error',
+                              optimizer=sgd,
+                              metrics=['accuracy'])
+
+                model.fit(X, Y, epochs=15, batch_size=10)
+            model.save_weights('my_model_weights.h5')
+            return redirect(student_dashboard)
+    else:
+        form = CseSkillRatingForm()
+    return render(request, 'skillRating.html', {'form': form})
+
 
 @csrf_exempt
 def student_dashboard(request):
@@ -239,7 +379,7 @@ def student_dashboard(request):
         ['os',student_skill.os - temp_map['os']],
         ['compiler',student_skill.compiler - temp_map['compiler']],
         ['communication',student_skill.communication - temp_map['communication']],
-        ['jee_mains',student_skill.jee_mains - temp_map['jee_mains']],
+        ['Aptitude',student_skill.jee_mains - temp_map['jee_mains']],
         ['cp',student_skill.cp - temp_map['cp']],
         ]
     suggestions =[]
@@ -303,8 +443,22 @@ def student_dashboard(request):
                                      , max_depth=100, random_state=0)
         clf.fit(X_train, y_train)
         x = clf.predict_proba(curr_student)
-        print(x[0][1])
-        print("########")
+        student.placement_chance=x[0][1]
+        student.delete()
+        student.save()
 
-    return render(request, 'student_dashboard.html', {'pred': x[0][1],'suggestions': suggestions,'jobs':jobs})
+        ##########################Deep Learning####################
+        #
+        # Y[:] = Y[:] - 1
+        # model = Sequential()
+        # model.load_weights('my_model_weights.h5')
+        # model.add(Dense(1, activation='relu', input_dim=16))
+        # sgd = SGD(lr=0.01)
+        #
+        # model.compile(loss='mean_squared_error',
+        #               optimizer=sgd,
+        #               metrics=['accuracy'])
+        # print(len(model.get_weights()))
+        # scores = model.evaluate(X, Y)
+    return render(request, 'student_dashboard.html', { 'pred': x[0][1]*100,'suggestions': suggestions,'jobs':jobs})
 

@@ -20,6 +20,20 @@ class Cse(models.Model):
     compiler = models.FloatField(default=50)
     student_roll = models.CharField(max_length=1000, primary_key=True)
 
+class CseRating(models.Model):
+    dsa = models.FloatField(default=10)
+    oops = models.FloatField(default=10)
+    dbms = models.FloatField(default=10)
+    Computer_Networks = models.FloatField(default=10)
+    os = models.FloatField(default=10)
+    communication = models.FloatField(default=10)
+    jee_mains = models.FloatField(default=10)
+    cp = models.FloatField(default=10)
+    compiler = models.FloatField(default=10)
+    student_roll = models.CharField(max_length=1000, primary_key=True)
+    student_background = models.FloatField(default=10)
+    placement_status = models.FloatField(default=0)
+
 
 class StudentGen(models.Model):
     student_roll = models.CharField(max_length=1000, primary_key=True)
@@ -39,4 +53,5 @@ class StudentGen(models.Model):
     Mothers_Occupation = models.IntegerField()
     Permanent_address = models.IntegerField()
     type_of_disability = models.IntegerField()
+    placement_chance = models.FloatField(default=.5000)
 

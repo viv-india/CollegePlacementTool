@@ -1,0 +1,46 @@
+<h> Welcome to Placement Factor Rating Page kindly rate 1 to 10 </h>
+<body>
+<style>
+input
+{
+ width: 40%;
+ border-style: ridge;
+
+}
+header{
+}
+body{
+  margin-top: 200px;
+  margin-left: 600px;
+}
+</style>
+<style>
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+
+
+<form style="text-align: left; " action="" method="post">
+
+    {% csrf_token %}
+    {% for field in form %}
+    <div class="fieldWrapper">
+        {{ field.errors }}
+        {{ field.label_tag }}
+        <br />{{ field }}
+    </div>
+    {% endfor %}
+    <br/>
+    <br />
+    <input style="width: 20%;margin-left: 100px;" type="submit" value="Submit">
+
+</form>
+
+</body>

@@ -13,6 +13,23 @@ class CseSkillForm(forms.Form):
     communication = forms.CharField(label=mark_safe('<br />Communication Skills:'), max_length=1000)
     jee_mains = forms.CharField(label=mark_safe('<br />Jee Mains Score:'), max_length=1000)
 
+class CseSkillRatingForm(forms.Form):
+    oops = forms.FloatField(label=mark_safe('<br />Object Oriented Programming:'))
+    dbms = forms.FloatField(label=mark_safe('<br />Database and Management Systems:'))
+    network = forms.FloatField(label=mark_safe('<br />Computer Networks:'))
+    dsa = forms.FloatField(label=mark_safe('<br />Data Structures and Algorithm:'))
+    os = forms.FloatField(label=mark_safe('<br />Operating Systems:'))
+    compiler = forms.FloatField(label=mark_safe('<br />Compiler:'))
+    cp = forms.FloatField(label=mark_safe('<br />Competitive Programming:'))
+    communication = forms.FloatField(label=mark_safe('<br />Communication Skills:'))
+    jee_mains = forms.FloatField(label=mark_safe('<br />Jee Mains Score:'))
+    placement_status = forms.ChoiceField(choices=
+    (
+        (0, 'Unplaced'),
+        (1, 'Placed'),
+    ))
+    student_background = forms.FloatField(label=mark_safe('<br />Student Background:'))
+
 
 class StudentForm(forms.Form):
     student_name = forms.CharField(label=mark_safe('<br />Student Name:'), max_length=1000)
@@ -93,18 +110,12 @@ class GenForm(forms.Form):
         (4, 'Business'),
         (5, 'Other Job'),
         (6, 'GOVERNMENT EMPLOYEE'),
-        (7, 'Railway Employee'),
         (8, 'TEACHER'),
-        (9, 'GOVERNMENT EMPLOYEEService'),
-        (10, 'Service'),
         (11, 'Advocate'),
         (12, 'Professor'),
         (13, 'Bank Manager'),
-        (14, 'Retired'),
         (15, 'Private Employee'),
-        (16, 'Retired GOVERNMENT EMPLOYEE'),
         (17, 'Engineer'),
-        (18, 'PRIVATE Service'),
     ))
     Gender = forms.ChoiceField(choices=
     (
